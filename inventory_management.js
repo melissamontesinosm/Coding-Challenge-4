@@ -8,3 +8,13 @@ let inventory = [
     { name: "Nightstand", price: 89, quantity: 66, lowStockLevel: 8}, 
     { name: "Headboards", price: 102, quantity: 78, lowStockLevel: 9},
 ];
+
+// Task 2: Create a Function to Display Product Details
+
+function displayProductDetails(inventory) {
+    inventory.forEach(product => {
+        const stockStatus = quantity <= lowStockLevel ? "Low Stock" : "In Stock"; // Using a ternary Operator to check stock status
+         console.log(`${product.name}: $${product.price} : ${product.quantity} units : ${product.stockStatus}`);
+    }); // Using the forEach formula to formulate a report
+}
+
