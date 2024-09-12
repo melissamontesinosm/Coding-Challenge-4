@@ -15,6 +15,7 @@ console.log(inventory)
 
 function displayProductDetails(inventory) {
     inventory.forEach(product => {
+        const {quantity, lowStockLevel} = product; // Defining quantity and lowStockLevel
         const stockStatus = quantity <= lowStockLevel ? "Low Stock" : "In Stock"; // Using a ternary Operator to check stock status
          console.log(`${product.name}: $${product.price} : ${product.quantity} units : ${product.stockStatus}`);
     }); // Using the forEach formula to formulate a report
