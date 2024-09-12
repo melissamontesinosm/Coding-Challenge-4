@@ -20,3 +20,7 @@ function displayProductDetails(inventory) {
     }); // Using the forEach formula to formulate a report
 }
 
+displayProductDetails(inventory);
+
+
+
