@@ -8,6 +8,8 @@ let inventory = [
     { name: "Nightstand", price: 89, quantity: 66, lowStockLevel: 8}, 
     { name: "Headboards", price: 102, quantity: 78, lowStockLevel: 9},
 ];
+ 
+console.log(inventory)
 
 // Task 2: Create a Function to Display Product Details
 
