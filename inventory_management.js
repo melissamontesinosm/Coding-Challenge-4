@@ -46,8 +46,27 @@ let status;
 
 inventory.forEach ((product, index) => {
     updateStock(product, unitsSold[index]);
-});
+}); 
 
 
 // Task 4: Create a Function to Check Low Stock Products
+
+const updatedinventory = [
+    { name:"Mattress", price: 522, quantity: 96, lowStockLevel: 22},
+    { name: "Pillow", price: 25, quantity: 91, lowStockLevel: 18},
+    { name: "Comforter", price: 121, quantity: 48, lowStockLevel: 14},
+    { name: "Nightstand", price: 89, quantity: 0, lowStockLevel: 8}, 
+    { name: "Headboards", price: 102, quantity: 7, lowStockLevel: 9},
+];
+
+function checkLowStock(updatedinventoryinventory) {
+    inventory.forEach(product => {
+        if (product.quantity < product.lowStockLevel) {
+            console.log(product.name);
+        } 
+    });
+}
+
+checkLowStock(updatedinventory);
+
 
