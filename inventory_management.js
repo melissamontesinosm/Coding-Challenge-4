@@ -32,17 +32,22 @@ const unitsSold = [42,121,50,66,71]; //Units Sold for Each Product
 function updateStock(product, UnitsSold) {
     product.quantity -= UnitsSold;
 
-    if (product.quantity <= 0) {
-        console.log (`${product.name}, Out of stock.`);
-    } else if (product.quantity < product.lowStockLevel) {
-        console.log (`${product.name}, Low stock.`);
+let status;
+    if (product.quanity <= 0) {
+        status = 'Out of Stock'
+    } else if (product.quanity <= product,lowStockLevel) {
+        status = 'Low on stock'
     } else {
-        console.log (`${product.name}, In Stock.`);
-    };
+        status = 'Sufficient Stock'
+    }
+
+ console.log(`${product.name}: Updated Quantity = ${product.quantity}, Status= ${status}`);
 } 
 
 inventory.forEach ((product, index) => {
     updateStock(product, unitsSold[index]);
 });
 
+
+// Task 4: Create a Function to Check Low Stock Products
 
