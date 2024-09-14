@@ -42,7 +42,7 @@ function updateStock(product, UnitsSold) {
 } 
 
 inventory.forEach ((product, index) => {
-    updateStock(product, unitsSold{index});
+    updateStock(product, unitsSold[index]);
 });
 
 
