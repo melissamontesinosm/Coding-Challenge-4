@@ -35,7 +35,7 @@ function updateStock(product, UnitsSold) {
 let status;
     if (product.quanity <= 0) {
         status = 'Out of Stock'
-    } else if (product.quanity <= product,lowStockLevel) {
+    } else if (product.quanity <= product.lowStockLevel) {
         status = 'Low on stock'
     } else {
         status = 'Sufficient Stock'
