@@ -27,7 +27,7 @@ displayProductDetails(inventory);
 
 // Task 3: Create a Function to Update Product Stock After Sales
 
-const UnitsSold = [42,121,50,66,71]; //Units Sold for Each Product
+const unitsSold = [42,121,50,66,71]; //Units Sold for Each Product
 
 function updateStock(product, UnitsSold) {
     product.quantity -= UnitsSold;
