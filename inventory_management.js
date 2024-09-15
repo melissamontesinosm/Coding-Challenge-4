@@ -62,7 +62,7 @@ const updatedinventory = [
 function checkLowStock(updatedinventoryinventory) {
     inventory.forEach(product => {
         if (product.quantity < product.lowStockLevel) {
-            console.log(product.name);
+            console.log(`Buy Stock for: ${product.name}`);
         } 
     });
 }
