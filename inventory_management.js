@@ -57,7 +57,7 @@ const updatedinventory = [
     { name: "Comforter", price: 121, quantity: 48, lowStockLevel: 14},
     { name: "Nightstand", price: 89, quantity: 0, lowStockLevel: 8}, 
     { name: "Headboards", price: 102, quantity: 7, lowStockLevel: 9},
-];
+]; //Updated inventory according to the previous task
 
 function checkLowStock(updatedinventoryinventory) {
     inventory.forEach(product => {
@@ -65,7 +65,7 @@ function checkLowStock(updatedinventoryinventory) {
             console.log(`Buy Stock for: ${product.name}`);
         } 
     });
-}
+} //Output: Nightstand and Headboards
 
 checkLowStock(updatedinventory);
 
@@ -76,8 +76,24 @@ function calculateInventoryValue(updatedinventory) {
     return updatedinventory.reduce((total, product) => {
         return total + (product.price * product.quantity);
     }, 0); 
-}    
+} // Calculated Total Inventory Value
 
 const totalValue = calculateInventoryValue(updatedinventory);
-console.log(`Current Total Inventory Value: $${totalValue}`);
+console.log(`Current Total Inventory Value: $${totalValue}`); //Output: $58,909
 
+
+// Task 6: Create a Function to Process a Sale
+
+function processSale(Name, unitsSold) {
+    const product = updatedinventory.find(product => product.name === Name);
+
+    if (product) {
+        updateStock(product, unitsSold); // Display Updated Quantity
+    } else {
+        console.log(`Error ${product} Not Found in Inventory`); // Didplay Error
+    }
+
+}
+
+processSale("Fridge", 20);
+processSale("Mattress", 4);
