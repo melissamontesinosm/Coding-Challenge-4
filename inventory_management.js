@@ -78,5 +78,6 @@ function calculateInventoryValue(updatedinventory) {
     }, 0); 
 }    
 
-calculateInventoryValue(updatedinventory);
+const totalValue = calculateInventoryValue(updatedinventory);
+console.log(`Current Total Inventory Value: $${tota;Value}`);
 
