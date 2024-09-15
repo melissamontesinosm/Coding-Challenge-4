@@ -90,7 +90,7 @@ function processSale(Name, unitsSold) {
     if (product) {
         updateStock(product, unitsSold); // Display Updated Quantity
     } else {
-        console.log(`Error ${product} Not Found in Inventory`); // Didplay Error
+        console.log(`Error ${Name} Not Found in Inventory`); // Didplay Error
     }
 
 }
