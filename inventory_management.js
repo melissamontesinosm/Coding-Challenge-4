@@ -95,5 +95,5 @@ function processSale(Name, unitsSold) {
 
 }
 
-processSale("Fridge", 20);
-processSale("Mattress", 4);
+processSale("Fridge", 20); // Output: Error Fridge Not Found in Inventory
+processSale("Mattress", 4); // Output: Mattress, Updated Quantity: 92, Status: Sufficient Stock
