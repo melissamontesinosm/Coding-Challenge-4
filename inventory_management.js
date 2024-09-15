@@ -59,8 +59,8 @@ const updatedinventory = [
     { name: "Headboards", price: 102, quantity: 7, lowStockLevel: 9},
 ]; //Updated inventory according to the previous task
 
-function checkLowStock(updatedinventoryinventory) {
-    inventory.forEach(product => {
+function checkLowStock(updatedinventory) {
+    updatedinventory.forEach(product => {
         if (product.quantity < product.lowStockLevel) {
             console.log(`Buy Stock for: ${product.name}`);
         } 
@@ -95,5 +95,6 @@ function processSale(Name, unitsSold) {
 
 }
 
+    // Examples 
 processSale("Fridge", 20); // Output: Error Fridge Not Found in Inventory
 processSale("Mattress", 4); // Output: Mattress, Updated Quantity: 92, Status: Sufficient Stock
