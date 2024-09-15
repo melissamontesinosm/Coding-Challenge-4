@@ -70,3 +70,13 @@ function checkLowStock(updatedinventoryinventory) {
 checkLowStock(updatedinventory);
 
 
+// Task 5: Create a Function to Calculate Total Inventory Value
+
+function calculateInventoryValue(updatedinventory) {
+    return updatedinventory.reduce((total, product) => {
+        return total + (product.price * product.quantity);
+    }, 0); 
+}    
+
+calculateInventoryValue(updatedinventory);
+
